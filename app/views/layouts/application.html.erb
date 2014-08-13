@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AugustAwesomeAnswers</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<!-- ここにBootstrapを入れる -->
+<% if flash[:notice] %>
+  <div class="alert alert-success">
+    <%= flash[:notice] %>
+  </div>
+<% elsif flash[:alert] %>
+  <div class="alert alert-danger">
+    <%= flash[:alert] %>
+  </div>
+<% end %>
+
+<div class="container-fluid">
+  <%= yield %>
+</div>
+
+</body>
+</html>
+<!-- <div class="col-md-6 col-sm-3 background-red">
+<br>
+<br>
+<br>
+</div>
+<div class="col-md-6 col-sm-3 background-blue">
+<br>
+<br>
+<br>
+<div class="special-background">
+<br>
+<br>
+</div> -->
